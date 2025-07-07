@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fpx-soap-service
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+cxf:
+  path: /soap
+  servlet:
+    load-on-startup: -1
+
+soap:
+  security:
+    wsse:
+      enabled: true
+      username-token:
+        password-type: PasswordText
+    
+logging:
+  level:
+    org.apache.cxf: DEBUG
+    com.yourcompany.fpx: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] [%X{correlationId}] %-5level %logger{36} - %msg%n"
+
+agrobankFpxEndpoint:
+  wsse:
+    byPass: false
