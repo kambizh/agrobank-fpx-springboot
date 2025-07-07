@@ -1,7 +1,7 @@
 # FPX SOAP Service Migration - Release Notes
 
 ## Version 1.0.0
-**Release Date:** January 2025  
+**Release Date:** July 2025  
 **Migration:** Grails 2.4.2 → Spring Boot 3.2.0
 
 ---
